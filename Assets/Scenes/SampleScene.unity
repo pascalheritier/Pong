@@ -272,7 +272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &213578602
 RectTransform:
   m_ObjectHideFlags: 0
@@ -543,7 +543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &423253170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,9 +588,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 437330745}
+        m_TargetAssemblyTypeName: Logic, Assembly-CSharp
+        m_MethodName: ResetGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -834,45 +834,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 437330743}
-  - component: {fileID: 437330742}
-  - component: {fileID: 437330744}
-  - component: {fileID: 437330741}
   - component: {fileID: 437330745}
-  - component: {fileID: 437330746}
   m_Layer: 0
   m_Name: Logic
-  m_TagString: Untagged
+  m_TagString: Logic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &437330741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437330740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 941425070940364499b74eabc48d8f92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointHUD_Player1: {fileID: 437330742}
-  pointHUD_Player2: {fileID: 437330744}
---- !u!114 &437330742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437330740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14ed7a23d7a927948bfe286449a23427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointText: {fileID: 1376661987}
 --- !u!4 &437330743
 Transform:
   m_ObjectHideFlags: 0
@@ -888,19 +857,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &437330744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437330740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14ed7a23d7a927948bfe286449a23427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointText: {fileID: 70314962}
 --- !u!114 &437330745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -913,22 +869,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c9ff54b63f5380438d5120fe64c88b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointHUD_Player1: {fileID: 1376661987}
+  pointHUD_Player2: {fileID: 70314962}
   GameEndConditionCount: 3
   victoryText: {fileID: 213578603}
   buttonNewMatch: {fileID: 423253170}
---- !u!114 &437330746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437330740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3be727064d2a95459d3120c764e76f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myButton: {fileID: 423253170}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

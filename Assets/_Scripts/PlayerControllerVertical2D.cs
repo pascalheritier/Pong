@@ -34,9 +34,6 @@ public class PlayerControllerVertical2D : MonoBehaviour
     void Update()
     {
         // Get player input from keyboard or controller
-        //float horizontalInput = Input.GetAxisRaw("Horizontal");
-        //float verticalInput = Input.GetAxisRaw("Vertical");
-
         Vector2 moveDirection = playerControls.ReadValue<Vector2>();
         float horizontalInput = moveDirection.x;
         float verticalInput = moveDirection.y;
