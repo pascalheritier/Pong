@@ -16,24 +16,11 @@ public class Logic : MonoBehaviour
 
     #region Singleton
 
-    public static Logic Instance { get; private set; }
-
-    private void Awake()
-    {
-        // If there is already an instance and it's not this one, destroy this
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        // Set the instance and mark this to not be destroyed on load
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
-
     public void Start()
     {
+        Debug.Log($"{nameof(Logic)} started");
+        pointHUD_Player1.text = pointsPlayer1.ToString();
+        pointHUD_Player2.text = pointsPlayer2.ToString();
     }
 
     #endregion
@@ -46,8 +33,8 @@ public class Logic : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI pointHUD_Player2;
 
-    private int pointsPlayer1;
-    private int pointsPlayer2;
+    public static int pointsPlayer1;
+    public static int pointsPlayer2;
 
     public void AddScorePlayer1(int scoreToAdd)
     {
@@ -101,6 +88,7 @@ public class Logic : MonoBehaviour
 
     private async Task ResetScene()
     {
+        Debug.Log($"{nameof(Logic)} reset scene");
         victoryText.gameObject.SetActive(false);
         buttonNewMatch.gameObject.SetActive(false);
         await SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
